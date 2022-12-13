@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "83a2d41c27eff3eb8d49be1531471397",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -492,6 +492,119 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "esatic/suitecrm",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/esaticsas/suitecrm-package.git",
+                "reference": "e3ee39128afec1407d68f9eb802898d2e5982c88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/esaticsas/suitecrm-package/zipball/e3ee39128afec1407d68f9eb802898d2e5982c88",
+                "reference": "e3ee39128afec1407d68f9eb802898d2e5982c88",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://esatic.repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "esatic/user-portal": "^1.0",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "laravel/framework": "^7.4|^8.0",
+                "php": "^7.4|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Esatic\\Suitecrm\\Providers\\SuitecrmServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Esatic\\Suitecrm\\": "src/"
+                }
+            },
+            "notification-url": "https://esatic.repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "joncasasq",
+                    "email": "jonathan.casas@esatic.com"
+                }
+            ],
+            "description": "Suitecrm integration package",
+            "support": {
+                "source": "https://github.com/esaticsas/suitecrm-package/tree/1.1.1",
+                "issues": "https://github.com/esaticsas/suitecrm-package/issues"
+            },
+            "time": "2022-12-13T17:21:31+00:00"
+        },
+        {
+            "name": "esatic/user-portal",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/esaticsas/esatic-userportal.git",
+                "reference": "8c3f369a62051713c151e75f1117e3df886e48d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/esaticsas/esatic-userportal/zipball/8c3f369a62051713c151e75f1117e3df886e48d0",
+                "reference": "8c3f369a62051713c151e75f1117e3df886e48d0",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://esatic.repo.repman.io/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "laravel/framework": "^7.4|^8.0",
+                "php": "^7.4|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Esatic\\ActiveUser\\Providers\\ActiveUserServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Esatic\\ActiveUser\\": "src/"
+                }
+            },
+            "notification-url": "https://esatic.repo.repman.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Casas",
+                    "email": "jonathan.casas@esatic.com"
+                }
+            ],
+            "description": "Register a user activated from the CRM in the database and send a confirmation email",
+            "support": {
+                "source": "https://github.com/esaticsas/esatic-userportal/tree/1.0.7",
+                "issues": "https://github.com/esaticsas/esatic-userportal/issues"
+            },
+            "time": "2022-12-13T17:21:06+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",

@@ -1,19 +1,17 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::prefix('login')->group(function () {
+    Route::post('', [\App\Http\Controllers\Api\LoginController::class, 'login']);
+});
+Route::middleware('auth:api')->prefix('user')->group(function () {
+    \Esatic\ActiveUser\Service\Routes::users();
+});
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix(env('ADMIN_PATH', 'administrator'))->group(function () {
+    Route::post('login', \App\Http\Controllers\Api\Admin\LoginController::class);
+    Route::middleware('auth:admin')->prefix('users')->group(function () {
+        \Esatic\ActiveUser\Service\Routes::admin();
+    });
 });
