@@ -1,11 +1,12 @@
 {
     "name": "esaticsas/customer-portal",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Esatic SAS - Customer portal",
     "keywords": [
-        "framework",
-        "laravel"
+        "suitecrm-laravel",
+        "suitecrm"
     ],
+    "version": "1.0.0",
     "license": "MIT",
     "require": {
         "php": "^7.4|^8.0",
@@ -15,7 +16,10 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "laravel/passport": "^10.1",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
